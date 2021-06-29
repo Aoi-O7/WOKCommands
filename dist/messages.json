@@ -53,7 +53,7 @@
         "portuguese": "Você não tem o cargo necessário para usar este comando! Você precisa de um dos seguintes: {ROLES}",
         "russian": "У вас нет необходимых ролей для использования этой команды! Вам понадобится одно из следующего: {ROLES}",
         "german": "Sie haben nicht die erforderlichen Rollen, um diesen Befehl zu verwenden! Sie benötigen eine der folgenden Möglichkeiten: {ROLES}",
-        "french": "Vous ne possedez pas les roles necessaire afin d'utiliser cette commande ! Vous devez posséder un des rangs suivant {ROLES}."
+        "french": "Vous ne possédez pas les roles necessaire afin d'utiliser cette commande ! Vous avez besoin d'un des rangs suivant: {ROLES}."
     },
     "COOLDOWN": {
         "english": "You must wait {COOLDOWN} before using that command again.",
@@ -77,7 +77,7 @@
         "portuguese": "Você não pode ativar ou desativar comandos em mensagens privadas.",
         "russian": "Вы не можете включать или отключать команды в личных сообщениях.",
         "german": "Du kannst keine Befehle in Privatnachrichten aktivieren oder deaktivieren.",
-        "french": "You cannot enable or disable commands in private messages."
+        "french": "Vous ne pouvez pas activer ou désactiver les commandes dans une conversation privée."
     },
     "COMMAND_ALREADY_ENABLED": {
         "english": "That command is already enabled!",
@@ -101,7 +101,7 @@
         "portuguese": "{COMMAND} agora está ativado!",
         "russian": "{COMMAND} теперь включена!",
         "german": "{COMMAND} wurde aktiviert!",
-        "french": "{COMMAND} is now enabled!"
+        "french": "{COMMAND} est maintenant activée!"
     },
     "COMMAND_NOW_DISABLED": {
         "english": "{COMMAND} is now disabled!",
@@ -109,7 +109,7 @@
         "portuguese": "{COMMAND} agora está desativado!",
         "russian": "{COMMAND} теперь отключена!",
         "german": "{COMMAND} wurde deaktiviert!",
-        "french": "{COMMAND} is now disabled!"
+        "french": "{COMMAND} est maintenant désactivée!"
     },
     "UNKNOWN_COMMAND": {
         "english": "Could not find command {COMMAND}!",
@@ -117,7 +117,7 @@
         "portuguese": "Não foi possível encontrar o comando {COMMAND}!",
         "russian": "Не удалось найти команду {COMMAND}!",
         "german": "Konnte den Befehl {COMMAND} nicht finden!",
-        "french": "Could not find command {COMMAND}!"
+        "french": "La commande {COMMAND} est inconnue!"
     },
     "CURRENT_PREFIX": {
         "english": "The current prefix is {PREFIX}.",
@@ -125,7 +125,7 @@
         "portuguese": "O prefixo atual é {PREFIX}.",
         "russian": "Текущий префикс: {PREFIX}.",
         "german": "Der aktuelle Prefix ist {PREFIX}.",
-        "french": "The current prefix is {PREFIX}."
+        "french": "Les prefix actuel est : {PREFIX}."
     },
     "SET_PREFIX": {
         "english": "Set the command prefix to {PREFIX}.",
@@ -133,7 +133,7 @@
         "portuguese": "Prefixo definido para {PREFIX}.",
         "russian": "Установлен префикс команд на {PREFIX}.",
         "german": "Der Prefix {PREFIX} wurde festgelegt.",
-        "french": "Set the command prefix to {PREFIX}."
+        "french": "Le prefix {PREFIX} a été défini."
     },
     "CANNOT_SET_PREFIX_IN_DMS": {
         "english": "You cannot set a prefix in a private message.",
@@ -141,14 +141,14 @@
         "portuguese": "Você não pode definir um prefixo em uma mensagem privada",
         "russian": "Вы не можете установить префикс в личном сообщении.",
         "german": "Du kannst den Prefix nicht in Privatnachrichten festlegen.",
-        "french": "You cannot set a prefix in a private message."
+        "french": "Vous ne pouvez pas fixer de prefix en message privé."
     },
     "CANNOT_CHANGE_REQUIRED_ROLES_IN_DMS": {
         "english": "You cannot change required roles in private messages.",
         "spanish": "No puede cambiar los roles requeridos en los mensajes privados.",
         "portuguese": "Você não pode alterar as funções necessárias em mensagens privadas",
         "russian": "Вы не можете изменить требуемые роли в личных сообщениях.",
-        "french": "You cannot change required roles in private messages."
+        "french": "Vous ne pouvez pas changer les rôles requis en message privé."
     },
     "REMOVED_ALL_REQUIRED_ROLES": {
         "english": "Removed all required roles from command {COMMAND}.",
@@ -156,7 +156,7 @@
         "portuguese": "Removidas todas as permissões necessárias para o comando {COMMAND}.",
         "russian": "Удалены все требуемые роли из команды {COMMAND}.",
         "german": "Alle benötigen Rollen wurde vom Befehl {COMMAND} entfernt.",
-        "french": "Removed all required roles from command {COMMAND}."
+        "french": "Suppression de tout les rôles requis pour la commande : {COMMAND}."
     },
     "ADDED_REQUIRED_ROLE": {
         "english": "Added role {ROLE} to command {COMMAND}.",
@@ -164,7 +164,7 @@
         "portuguese": "Adicionado o cargo {ROLE} para o comando {COMMAND}.",
         "russian": "Добавлена роль {ROLE} в команду {COMMAND}.",
         "german": "Die Rolle {ROLE} wurde dem Befehl {COMMAND} hinzugefügt.",
-        "french": "Added role {ROLE} to command {COMMAND}."
+        "french": "Ajoute le rôle {ROLE} sur la commande {COMMAND}."
     },
     "SYNTAX_ERROR": {
         "english": "Incorrect usage! Please use \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
@@ -172,7 +172,7 @@
         "portuguese": "Uso incorreto! Utilize \"{PREFIX} {COMMAND} {ARGUMENTS}\"",
         "russian": "Неправильное использование, пожалуйста используйте \"{PREFIX} {COMMAND} {ARGUMENTS}\"",
         "german": "Falsche Verwendung! Bitte nutze \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
-        "french": "Incorrect usage! Please use \"{PREFIX}{COMMAND} {ARGUMENTS}\""
+        "french": "Utilisation incorrecte! Veuillez utiliser \"{PREFIX}{COMMAND} {ARGUMENTS}\""
     },
     "NO_DATABASE_FOUND": {
         "english": "No database connection found!",
@@ -188,7 +188,7 @@
         "portuguese": "Este comando só pode ser usado em um servidor.",
         "russian": "Эта команда может быть использована только внутри сервера.",
         "german": "Dieser Befehl kann nur in einem Server benutzt werden.",
-        "french": "This command can only be used within a server."
+        "french": "Cette commande peut uniquement être utilisé sur un serveur."
     },
     "NO_REACT_PERMS": {
         "english": "This bot needs the \"Add Reactions\" permission to use the help menu.",
@@ -196,7 +196,7 @@
         "portuguese": "Este bot precisa da permissão \"Adicionar reações\" para usar o menu de ajuda.",
         "russian": "Этому боту требуется право \"Добавлять реакции\", что-бы использовать меню помощи.",
         "german": "Der Bot benötigt die Berechtigung \"Reaktionen hinzufügen\", damit das Hilfemenü genutzt werden kann.",
-        "french": "This bot needs the \"Add Reactions\" permission to use the help menu."
+        "french": "Ce bot requiert la permission \"Add Reactions\" afin d'utiliser le menu 'help'."
     },
     "EXCEPTION": {
         "english": "An error occurred when running this command! This error has been reported to the developers.",
@@ -204,7 +204,7 @@
         "portuguese": "Ocorreu um erro ao executar este comando! Este erro foi relatado aos desenvolvedores.",
         "russian": "Произошла ошибка при выполнении этой команды! Об этой ошибке было сообщено разработчикам.",
         "german": "Beim Ausführen dieses Befehls ist ein Fehler aufgetreten! Dieser Fehler wurde den Entwicklern gemeldet.",
-        "french": "An error occurred when running this command! This error has been reported to the developers."
+        "french": "Une erreur s'est produite sur cette commande! L'erreur a été signalé aux dévelopeurs."
     },
     "NO_TAGGED_CHANNELS": {
         "english": "Please tag at least one channel.",
@@ -212,7 +212,7 @@
         "portuguese": "Marque pelo menos um canal.",
         "russian": "Отметьте хотя бы один канал.",
         "german": "Bitte taggen Sie mindestens einen Kanal.",
-        "french": "Please tag at least one channel."
+        "french": "Veuillez tag au moins un salon."
 
     },
     "NOT_CHANNEL_COMMAND": {
@@ -221,7 +221,7 @@
         "portuguese": "Esse comando atualmente não está limitado a nenhum canal.",
         "russian": "Эта команда в настоящее время не ограничена каким-либо каналом.",
         "german": "Dieser Befehl ist derzeit nicht auf einen Kanal beschränkt.",
-        "french": "That command is currently not limited to any channel."
+        "french": "Cette commande n'est actuellement limitée à aucun salon."
     },
     "NO_LONGER_CHANNEL_COMMAND": {
         "english": "That command is no longer a channel specific command.",
@@ -229,7 +229,7 @@
         "portuguese": "Esse comando não é mais um comando específico do canal.",
         "russian": "Эта команда больше не является командой канала.",
         "german": "Dieser Befehl ist kein kanalspezifischer Befehl mehr.",
-        "french": "That command is no longer a channel specific command."
+        "french": "Cette commande n'est plus limitée à un salon."
     },
     "NOW_CHANNEL_COMMAND": {
         "english": "\"{COMMAND}\" can now only be ran in {CHANNELS}.",
@@ -237,7 +237,7 @@
         "portuguese": "\"{COMMAND}\" agora só pode ser executado em {CHANNELS}.",
         "russian": "\"{COMMAND}\" теперь может выполняться только на {CHANNELS}.",
         "german": "\"{COMMAND}\" kann jetzt nur noch in {CHANNELS} ausgeführt werden.",
-        "french": "\"{COMMAND}\" can now only be ran in {CHANNELS}."
+        "french": "\"{COMMAND}\" peut dorénavant plus qu'être utilisé dans le salon : {CHANNELS}."
     },
     "ALLOWED_CHANNELS": {
         "english": "You can only use that command in the following: {CHANNELS}.",
@@ -245,7 +245,7 @@
         "portuguese": "Você só pode usar esse comando nos seguintes: {CHANNELS}.",
         "russian": "Вы можете использовать эту команду только в следующих случаях: {CHANNELS}.",
         "german": "Sie können diesen Befehl nur im Folgenden verwenden: {CHANNELS}.",
-        "french": "You can only use that command in the following: {CHANNELS}."
+        "french": "Vous pouvez uniquement utiliser cette commande dans les salons suivant : {CHANNELS}."
     },
     "HELP_MENU": {
         "TITLE": {
@@ -262,7 +262,7 @@
             "portuguese": "Selecione uma categoria de comando clicando em sua reação.",
             "russian": "Пожалуйста, выберите категорию команд нажатием на её реакцию.",
             "german": "Bitte wähle eine Befehlskategorie aus, indem du auf eine Reaktion klickst.",
-            "french": "Меню помощи"
+            "french": "Veuillez séléctionner une catégorie de commande en cliquant sur les reactions ci-dessous."
         },
         "COMMANDS": {
             "english": "commands",
@@ -270,7 +270,7 @@
             "portuguese": "comandos",
             "russian": "команды",
             "german": "Befehle",
-            "french": "команды"
+            "french": "Commandes"
         },
         "DESCRIPTION_FIRST_LINE": {
             "english": "Use 🚪 to return to the previous menu.",
@@ -278,7 +278,7 @@
             "portuguese": "Use 🚪 para retornar ao menu anterior",
             "russian": "Используйте 🚪, что-бы вернуться в предыдущее меню.",
             "german": "Benutze 🚪, um zum vorherigen Menü zurückzukehren.",
-            "french": "Используйте 🚪, что-бы вернуться в предыдущее меню."
+            "french": "Utilisez 🚪 afin de retourner au menu précédent."
         },
         "DESCRIPTION_SECOND_LINE": {
             "english": "Use ⬅ and ➡ to navigate between pages.",
@@ -286,7 +286,7 @@
             "portuguese": "Use ⬅ e ➡ para navegar entre as páginas.",
             "russian": "Используйте ⬅ and ➡ для перехода между страницами.",
             "german": "Benutze ⬅ und ➡, um zwischen den Seiten hin und her zu wechseln.",
-            "french": "Используйте ⬅ and ➡ для перехода между страницами."
+            "french": "Utilisez ⬅ et ➡ afin de naviguer entre les pages."
         },
         "ALIASES": {
             "english": "Aliases",
