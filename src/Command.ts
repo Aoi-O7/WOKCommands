@@ -130,14 +130,14 @@ class Command {
       this._ownerOnly &&
       !this.instance.botOwner.includes(message.author.id)
     ) {
-      message.reply(
+      message.channel.send(
         this.instance.messageHandler.get(message.guild, "BOT_OWNERS_ONLY")
       );
       return;
     }
 
     if (this.guildOnly && !message.guild) {
-      message.reply(
+      message.channel.send(
         this.instance.messageHandler.get(message.guild, "GUILD_ONLY_COMMAND")
       );
       return;
