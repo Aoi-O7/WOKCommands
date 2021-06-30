@@ -63,17 +63,25 @@
 //                 default:
 //                     if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
 //                     if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-//                     if (op[0] === 6 && _.label < t[1]) { _.label = t[1];
-//                         t = op; break; }
-//                     if (t && _.label < t[2]) { _.label = t[2];
-//                         _.ops.push(op); break; }
+//                     if (op[0] === 6 && _.label < t[1]) {
+//                         _.label = t[1];
+//                         t = op;
+//                         break;
+//                     }
+//                     if (t && _.label < t[2]) {
+//                         _.label = t[2];
+//                         _.ops.push(op);
+//                         break;
+//                     }
 //                     if (t[2]) _.ops.pop();
 //                     _.trys.pop();
 //                     continue;
 //             }
 //             op = body.call(thisArg, _);
-//         } catch (e) { op = [6, e];
-//             y = 0; } finally { f = t = 0; }
+//         } catch (e) {
+//             op = [6, e];
+//             y = 0;
+//         } finally { f = t = 0; }
 //         if (op[0] & 5) throw op[1];
 //         return { value: op[0] ? op[1] : void 0, done: true };
 //     }
@@ -103,16 +111,16 @@
 //     expectedArgs: '[command]',
 //     description: "Displays this bot's commands",
 //     category: 'Help',
-//     init: function(client, instance) {
-//         client.on('messageReactionAdd', function(reaction, user) {
-//             return __awaiter(void 0, void 0, void 0, function() {
-//                 return __generator(this, function(_a) {
-//                     new _ReactionListener_1.default(instance, reaction, user);
-//                     return [2 /*return*/ ];
-//                 });
-//             });
-//         });
-//     },
+//     // init: function(client, instance) {
+//     //     client.on('messageReactionAdd', function(reaction, user) {
+//     //         return __awaiter(void 0, void 0, void 0, function() {
+//     //             return __generator(this, function(_a) {
+//     //                 new _ReactionListener_1.default(instance, reaction, user);
+//     //                 return [2 /*return*/ ];
+//     //             });
+//     //         });
+//     //     });
+//     // },
 //     callback: function(options) {
 //         var _a, _b, _c;
 //         var message = options.message,
@@ -128,10 +136,10 @@
 //             return;
 //         }
 //         // Typical "!help" syntax for the menu
-//         if (args.length === 0) {
-//             sendHelpMenu(message, instance);
-//             return;
-//         }
+//         // if (args.length === 0) {
+//         //     sendHelpMenu(message, instance);
+//         //     return;
+//         // }
 //         // If the user is looking for info on a specific command
 //         // Ex: "!help prefix"
 //         var arg = (_c = args.shift()) === null || _c === void 0 ? void 0 : _c.toLowerCase();

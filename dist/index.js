@@ -1,13 +1,18 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
+var __extends = (this && this.__extends) || (function() {
+    var extendStatics = function(d, b) {
         extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            ({ __proto__: [] }
+                instanceof Array && function(d, b) { d.__proto__ = b; }) ||
+            function(d, b) {
+                for (var p in b)
+                    if (b.hasOwnProperty(p)) d[p] = b[p];
+            };
         return extendStatics(d, b);
     };
-    return function (d, b) {
+    return function(d, b) {
         extendStatics(d, b);
+
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
@@ -24,50 +29,82 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 }) : function(o, v) {
     o["default"] = v;
 });
-var __importStar = (this && this.__importStar) || function (mod) {
+var __importStar = (this && this.__importStar) || function(mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null)
+        for (var k in mod)
+            if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
+var __awaiter = (this && this.__awaiter) || function(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function(resolve) { resolve(value); }); }
+    return new(P || (P = Promise))(function(resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+var __generator = (this && this.__generator) || function(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] },
+        f, y, t, g;
     return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
+
+    function verb(n) { return function(v) { return step([n, v]); }; }
+
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                case 0:
+                case 1:
+                    t = op;
+                    break;
+                case 4:
+                    _.label++;
+                    return { value: op[1], done: false };
+                case 5:
+                    _.label++;
+                    y = op[1];
+                    op = [0];
+                    continue;
+                case 7:
+                    op = _.ops.pop();
+                    _.trys.pop();
+                    continue;
                 default:
                     if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
                     if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (op[0] === 6 && _.label < t[1]) {
+                        _.label = t[1];
+                        t = op;
+                        break;
+                    }
+                    if (t && _.label < t[2]) {
+                        _.label = t[2];
+                        _.ops.push(op);
+                        break;
+                    }
                     if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
+                    _.trys.pop();
+                    continue;
             }
             op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+        } catch (e) {
+            op = [6, e];
+            y = 0;
+        } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1];
+        return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
+var __importDefault = (this && this.__importDefault) || function(mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 var events_1 = require("events");
@@ -78,8 +115,9 @@ var prefixes_1 = __importDefault(require("./models/prefixes"));
 var message_handler_1 = __importDefault(require("./message-handler"));
 var Events_1 = __importDefault(require("./enums/Events"));
 var SlashCommands_1 = __importDefault(require("./SlashCommands"));
-var WOKCommands = /** @class */ (function (_super) {
+var WOKCommands = /** @class */ (function(_super) {
     __extends(WOKCommands, _super);
+
     function WOKCommands(client, options) {
         var _this = _super.call(this) || this;
         _this._defaultPrefix = "!";
@@ -104,7 +142,27 @@ var WOKCommands = /** @class */ (function (_super) {
             throw new Error("No Discord JS Client provided as first argument!");
         }
         _this._client = client;
-        var _a = options.commandsDir, commandsDir = _a === void 0 ? "" : _a, _b = options.commandDir, commandDir = _b === void 0 ? "" : _b, _c = options.featuresDir, featuresDir = _c === void 0 ? "" : _c, _d = options.featureDir, featureDir = _d === void 0 ? "" : _d, messagesPath = options.messagesPath, _e = options.showWarns, showWarns = _e === void 0 ? true : _e, _f = options.del, del = _f === void 0 ? -1 : _f, _g = options.defaultLanguage, defaultLanguage = _g === void 0 ? "english" : _g, _h = options.ignoreBots, ignoreBots = _h === void 0 ? true : _h, dbOptions = options.dbOptions, testServers = options.testServers, _j = options.disabledDefaultCommands, disabledDefaultCommands = _j === void 0 ? [] : _j;
+        var _a = options.commandsDir,
+            commandsDir = _a === void 0 ? "" : _a,
+            _b = options.commandDir,
+            commandDir = _b === void 0 ? "" : _b,
+            _c = options.featuresDir,
+            featuresDir = _c === void 0 ? "" : _c,
+            _d = options.featureDir,
+            featureDir = _d === void 0 ? "" : _d,
+            messagesPath = options.messagesPath,
+            _e = options.showWarns,
+            showWarns = _e === void 0 ? true : _e,
+            _f = options.del,
+            del = _f === void 0 ? -1 : _f,
+            _g = options.defaultLanguage,
+            defaultLanguage = _g === void 0 ? "french" : _g,
+            _h = options.ignoreBots,
+            ignoreBots = _h === void 0 ? true : _h,
+            dbOptions = options.dbOptions,
+            testServers = options.testServers,
+            _j = options.disabledDefaultCommands,
+            disabledDefaultCommands = _j === void 0 ? [] : _j;
         var partials = client.options.partials;
         _this._commandsDir = commandsDir || commandDir || _this._commandsDir;
         _this._featuresDir = featuresDir || featureDir || _this._featuresDir;
@@ -151,126 +209,129 @@ var WOKCommands = /** @class */ (function (_super) {
         _this._messageHandler = new message_handler_1.default(_this, messagesPath || "");
         _this.setCategorySettings("Configuration", "⚙️");
         _this.setCategorySettings("Help", "❓");
-        setTimeout(function () { return __awaiter(_this, void 0, void 0, function () {
-            var results, _i, results_1, result, _id, prefix;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        if (!this._mongo) return [3 /*break*/, 3];
-                        return [4 /*yield*/, mongo_1.default(this._mongo, this, dbOptions)];
-                    case 1:
-                        _a.sent();
-                        this._mongoConnection = mongo_1.getMongoConnection();
-                        return [4 /*yield*/, prefixes_1.default.find({})];
-                    case 2:
-                        results = _a.sent();
-                        for (_i = 0, results_1 = results; _i < results_1.length; _i++) {
-                            result = results_1[_i];
-                            _id = result._id, prefix = result.prefix;
-                            this._prefixes[_id] = prefix;
-                        }
-                        return [3 /*break*/, 4];
-                    case 3:
-                        if (showWarns) {
-                            console.warn("WOKCommands > No MongoDB connection URI provided. Some features might not work! See this for more details:\nhttps://github.com/AlexzanderFlores/WOKCommands#setup");
-                        }
-                        this.emit(Events_1.default.DATABASE_CONNECTED, null, "");
-                        _a.label = 4;
-                    case 4: return [2 /*return*/];
-                }
+        setTimeout(function() {
+            return __awaiter(_this, void 0, void 0, function() {
+                var results, _i, results_1, result, _id, prefix;
+                return __generator(this, function(_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (!this._mongo) return [3 /*break*/ , 3];
+                            return [4 /*yield*/ , mongo_1.default(this._mongo, this, dbOptions)];
+                        case 1:
+                            _a.sent();
+                            this._mongoConnection = mongo_1.getMongoConnection();
+                            return [4 /*yield*/ , prefixes_1.default.find({})];
+                        case 2:
+                            results = _a.sent();
+                            for (_i = 0, results_1 = results; _i < results_1.length; _i++) {
+                                result = results_1[_i];
+                                _id = result._id, prefix = result.prefix;
+                                this._prefixes[_id] = prefix;
+                            }
+                            return [3 /*break*/ , 4];
+                        case 3:
+                            if (showWarns) {
+                                console.warn("WOKCommands > No MongoDB connection URI provided. Some features might not work! See this for more details:\nhttps://github.com/AlexzanderFlores/WOKCommands#setup");
+                            }
+                            this.emit(Events_1.default.DATABASE_CONNECTED, null, "");
+                            _a.label = 4;
+                        case 4:
+                            return [2 /*return*/ ];
+                    }
+                });
             });
-        }); }, 500);
+        }, 500);
         return _this;
     }
     Object.defineProperty(WOKCommands.prototype, "mongoPath", {
-        get: function () {
+        get: function() {
             return this._mongo;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setMongoPath = function (mongoPath) {
+    WOKCommands.prototype.setMongoPath = function(mongoPath) {
         this._mongo = mongoPath;
         return this;
     };
     /**
      * @deprecated Please use the messages.json file instead of this method.
      */
-    WOKCommands.prototype.setSyntaxError = function (syntaxError) {
+    WOKCommands.prototype.setSyntaxError = function(syntaxError) {
         console.warn("WOKCommands > The setSyntaxError method is deprecated. Please use messages.json instead. See https://www.npmjs.com/package/wokcommands#language-support for more information");
         return this;
     };
     Object.defineProperty(WOKCommands.prototype, "client", {
-        get: function () {
+        get: function() {
             return this._client;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "displayName", {
-        get: function () {
+        get: function() {
             return this._displayName;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setDisplayName = function (displayName) {
+    WOKCommands.prototype.setDisplayName = function(displayName) {
         this._displayName = displayName;
         return this;
     };
     Object.defineProperty(WOKCommands.prototype, "prefixes", {
-        get: function () {
+        get: function() {
             return this._prefixes;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "defaultPrefix", {
-        get: function () {
+        get: function() {
             return this._defaultPrefix;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setDefaultPrefix = function (defaultPrefix) {
+    WOKCommands.prototype.setDefaultPrefix = function(defaultPrefix) {
         this._defaultPrefix = defaultPrefix;
         return this;
     };
-    WOKCommands.prototype.getPrefix = function (guild) {
+    WOKCommands.prototype.getPrefix = function(guild) {
         return this._prefixes[guild ? guild.id : ""] || this._defaultPrefix;
     };
-    WOKCommands.prototype.setPrefix = function (guild, prefix) {
+    WOKCommands.prototype.setPrefix = function(guild, prefix) {
         if (guild) {
             this._prefixes[guild.id] = prefix;
         }
         return this;
     };
     Object.defineProperty(WOKCommands.prototype, "categories", {
-        get: function () {
+        get: function() {
             return this._categories;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "hiddenCategories", {
-        get: function () {
+        get: function() {
             return this._hiddenCategories;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "color", {
-        get: function () {
+        get: function() {
             return this._color;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setColor = function (color) {
+    WOKCommands.prototype.setColor = function(color) {
         this._color = color;
         return this;
     };
-    WOKCommands.prototype.getEmoji = function (category) {
+    WOKCommands.prototype.getEmoji = function(category) {
         var emoji = this._categories.get(category) || "";
         if (typeof emoji === "object") {
             // @ts-ignore
@@ -278,9 +339,9 @@ var WOKCommands = /** @class */ (function (_super) {
         }
         return emoji;
     };
-    WOKCommands.prototype.getCategory = function (emoji) {
+    WOKCommands.prototype.getCategory = function(emoji) {
         var result = "";
-        this._categories.forEach(function (value, key) {
+        this._categories.forEach(function(value, key) {
             // == is intended here
             if (emoji == value) {
                 // @ts-ignore
@@ -293,12 +354,12 @@ var WOKCommands = /** @class */ (function (_super) {
     /**
      * @deprecated Please use the setCategorySettings instead of this method.
      */
-    WOKCommands.prototype.setCategoryEmoji = function (category, emoji) {
+    WOKCommands.prototype.setCategoryEmoji = function(category, emoji) {
         console.warn("WOKCommands > The setCategoryEmoji method is deprecated, please use setCategorySettings");
         this.setCategorySettings(category, emoji);
         return this;
     };
-    WOKCommands.prototype.setCategorySettings = function (category, emoji) {
+    WOKCommands.prototype.setCategorySettings = function(category, emoji) {
         if (typeof category == "string") {
             if (!emoji) {
                 throw new Error("WOKCommands > An emoji is required for category \"" + category + "\"");
@@ -307,10 +368,13 @@ var WOKCommands = /** @class */ (function (_super) {
                 console.warn("WOKCommands > The emoji \"" + emoji + "\" for category \"" + category + "\" is already used.");
             }
             this._categories.set(category, emoji || this.categories.get(category) || "");
-        }
-        else {
+        } else {
             for (var _i = 0, category_1 = category; _i < category_1.length; _i++) {
-                var _a = category_1[_i], emoji_1 = _a.emoji, name_1 = _a.name, hidden = _a.hidden, customEmoji = _a.customEmoji;
+                var _a = category_1[_i],
+                    emoji_1 = _a.emoji,
+                    name_1 = _a.name,
+                    hidden = _a.hidden,
+                    customEmoji = _a.customEmoji;
                 if (emoji_1.startsWith("<:") && emoji_1.endsWith(">")) {
                     customEmoji = true;
                     emoji_1 = emoji_1.split(":")[2];
@@ -320,7 +384,7 @@ var WOKCommands = /** @class */ (function (_super) {
                     emoji_1 = this._client.emojis.cache.get(emoji_1);
                 }
                 if (this.isEmojiUsed(emoji_1)) {
-                    console.warn("WOKCommands > The emoji \"" + emoji_1 + "\" for category \"" + name_1 + "\" is already used.");
+                    // console.warn("WOKCommands > The emoji \"" + emoji_1 + "\" for category \"" + name_1 + "\" is already used.");
                 }
                 this._categories.set(name_1, emoji_1 || this.categories.get(name_1) || "");
                 if (hidden) {
@@ -330,9 +394,9 @@ var WOKCommands = /** @class */ (function (_super) {
         }
         return this;
     };
-    WOKCommands.prototype.isEmojiUsed = function (emoji) {
+    WOKCommands.prototype.isEmojiUsed = function(emoji) {
         var isUsed = false;
-        this._categories.forEach(function (value) {
+        this._categories.forEach(function(value) {
             if (value === emoji) {
                 isUsed = true;
             }
@@ -340,63 +404,63 @@ var WOKCommands = /** @class */ (function (_super) {
         return isUsed;
     };
     Object.defineProperty(WOKCommands.prototype, "commandHandler", {
-        get: function () {
+        get: function() {
             return this._commandHandler;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "mongoConnection", {
-        get: function () {
+        get: function() {
             return this._mongoConnection;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.isDBConnected = function () {
+    WOKCommands.prototype.isDBConnected = function() {
         var connection = this.mongoConnection;
         return !!(connection && connection.readyState === 1);
     };
-    WOKCommands.prototype.setTagPeople = function (tagPeople) {
+    WOKCommands.prototype.setTagPeople = function(tagPeople) {
         this._tagPeople = tagPeople;
         return this;
     };
     Object.defineProperty(WOKCommands.prototype, "tagPeople", {
-        get: function () {
+        get: function() {
             return this._tagPeople;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "showWarns", {
-        get: function () {
+        get: function() {
             return this._showWarns;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "del", {
-        get: function () {
+        get: function() {
             return this._del;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "ignoreBots", {
-        get: function () {
+        get: function() {
             return this._ignoreBots;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "botOwner", {
-        get: function () {
+        get: function() {
             return this._botOwner;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setBotOwner = function (botOwner) {
+    WOKCommands.prototype.setBotOwner = function(botOwner) {
         if (typeof botOwner === "string") {
             botOwner = [botOwner];
         }
@@ -404,32 +468,32 @@ var WOKCommands = /** @class */ (function (_super) {
         return this;
     };
     Object.defineProperty(WOKCommands.prototype, "testServers", {
-        get: function () {
+        get: function() {
             return this._testServers;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "defaultLanguage", {
-        get: function () {
+        get: function() {
             return this._defaultLanguage;
         },
         enumerable: false,
         configurable: true
     });
-    WOKCommands.prototype.setDefaultLanguage = function (defaultLanguage) {
+    WOKCommands.prototype.setDefaultLanguage = function(defaultLanguage) {
         this._defaultLanguage = defaultLanguage;
         return this;
     };
     Object.defineProperty(WOKCommands.prototype, "messageHandler", {
-        get: function () {
+        get: function() {
             return this._messageHandler;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(WOKCommands.prototype, "slashCommands", {
-        get: function () {
+        get: function() {
             return this._slashCommand;
         },
         enumerable: false,
