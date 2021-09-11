@@ -40,7 +40,7 @@ module.exports = {
     }
 
     if (guild && !guild.me?.hasPermission('ADD_REACTIONS')) {
-      message.channel.send(instance.messageHandler.get(guild, 'NO_REACT_PERMS'))
+      message.reply(instance.messageHandler.get(guild, 'NO_REACT_PERMS'))
       return
     }
 
@@ -56,7 +56,7 @@ module.exports = {
 
     const command = instance.commandHandler.getICommand(arg)
     if (!command) {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(guild, 'UNKNOWN_COMMAND', {
           COMMAND: arg,
         })

@@ -256,7 +256,7 @@ class CommandHandler {
             });
           } else {
             // Reply with the local or global syntax error
-            message.channel.send(errorMsg);
+            message.reply(errorMsg);
           }
           return;
         }
@@ -277,7 +277,7 @@ class CommandHandler {
                 },
               });
             } else {
-              message.channel.send(
+              message.reply(
                 instance.messageHandler.get(guild, "COOLDOWN", {
                   COOLDOWN: timeLeft,
                 })
@@ -304,7 +304,7 @@ class CommandHandler {
               channelList += `<#${channel}>, `;
             }
             channelList = channelList.substring(0, channelList.length - 2);
-            message.channel.send(
+            message.reply(
               instance.messageHandler.get(guild, "ALLOWED_CHANNELS", {
                 CHANNELS: channelList,
               })
@@ -326,7 +326,7 @@ class CommandHandler {
               },
             });
           } else {
-            message.channel.send(instance.messageHandler.get(guild, "EXCEPTION"));
+            message.reply(instance.messageHandler.get(guild, "EXCEPTION"));
             console.error(e);
           }
 

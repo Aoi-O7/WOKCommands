@@ -23,7 +23,7 @@ export = {
 
     const { guild } = message
     if (!guild) {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(
           guild,
           'CANNOT_CHANGE_REQUIRED_ROLES_IN_DMS'
@@ -33,7 +33,7 @@ export = {
     }
 
     if (!instance.isDBConnected()) {
-      message.channel.send(instance.messageHandler.get(guild, 'NO_DATABASE_FOUND'))
+      message.reply(instance.messageHandler.get(guild, 'NO_DATABASE_FOUND'))
       return
     }
 
@@ -48,7 +48,7 @@ export = {
           command: command.names[0],
         })
 
-        message.channel.send(
+        message.reply(
           instance.messageHandler.get(guild, 'REMOVED_ALL_REQUIRED_ROLES', {
             COMMAND: command.names[0],
           })
@@ -73,7 +73,7 @@ export = {
           }
         )
 
-        message.channel.send(
+        message.reply(
           instance.messageHandler.get(guild, 'ADDED_REQUIRED_ROLE', {
             ROLE: roleId,
             COMMAND: command.names[0],
@@ -81,7 +81,7 @@ export = {
         )
       }
     } else {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(guild, 'UNKNOWN_COMMAND', {
           COMMAND: name,
         })

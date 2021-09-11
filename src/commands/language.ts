@@ -21,14 +21,14 @@ export = {
     const { messageHandler } = instance;
 
     if (!instance.isDBConnected()) {
-      message.channel.send(instance.messageHandler.get(guild, "NO_DATABASE_FOUND"));
+      message.reply(instance.messageHandler.get(guild, "NO_DATABASE_FOUND"));
       return;
     }
 
     const lang = text.toLowerCase();
 
     if (!lang) {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(guild, "CURRENT_LANGUAGE", {
           LANGUAGE: instance.messageHandler.getLanguage(guild),
         })
@@ -37,7 +37,7 @@ export = {
     }
 
     if (!messageHandler.languages().includes(lang)) {
-      message.channel.send(
+      message.reply(
         messageHandler.get(guild, "LANGUAGE_NOT_SUPPORTED", {
           LANGUAGE: lang,
         })
@@ -49,7 +49,7 @@ export = {
     }
 
     instance.messageHandler.setLanguage(guild, lang);
-    message.channel.send(
+    message.reply(
       instance.messageHandler.get(guild, "NEW_LANGUAGE", {
         LANGUAGE: lang,
       })

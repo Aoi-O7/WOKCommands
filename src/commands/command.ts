@@ -17,19 +17,19 @@ export = {
     const name = (args.shift() || '').toLowerCase()
 
     if (!guild) {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(guild, 'CANNOT_ENABLE_DISABLE_IN_DMS')
       )
       return
     }
 
     if (!instance.isDBConnected()) {
-      message.channel.send(instance.messageHandler.get(guild, 'NO_DATABASE_FOUND'))
+      message.reply(instance.messageHandler.get(guild, 'NO_DATABASE_FOUND'))
       return
     }
 
     if (newState !== 'enable' && newState !== 'disable') {
-      message.channel.send(instance.messageHandler.get(guild, 'ENABLE_DISABLE_STATE'))
+      message.reply(instance.messageHandler.get(guild, 'ENABLE_DISABLE_STATE'))
       return
     }
 
@@ -41,7 +41,7 @@ export = {
 
       if (newState === 'enable') {
         if (!isDisabled) {
-          message.channel.send(
+          message.reply(
             instance.messageHandler.get(guild, 'COMMAND_ALREADY_ENABLED')
           )
           return
@@ -54,14 +54,14 @@ export = {
 
         command.enable(guild.id)
 
-        message.channel.send(
+        message.reply(
           instance.messageHandler.get(guild, 'COMMAND_NOW_ENABLED', {
             COMMAND: mainCommand,
           })
         )
       } else {
         if (isDisabled) {
-          message.channel.send(
+          message.reply(
             instance.messageHandler.get(guild, 'COMMAND_ALREADY_DISABLED')
           )
           return
@@ -74,14 +74,14 @@ export = {
 
         command.disable(guild.id)
 
-        message.channel.send(
+        message.reply(
           instance.messageHandler.get(guild, 'COMMAND_NOW_DISABLED', {
             COMMAND: mainCommand,
           })
         )
       }
     } else {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(guild, 'UNKNOWN_COMMAND', {
           COMMAND: name,
         })

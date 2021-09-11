@@ -14,7 +14,7 @@ export = {
     const { guild } = message
 
     if (args.length === 0) {
-      message.channel.send(
+      message.reply(
         instance.messageHandler.get(guild, 'CURRENT_PREFIX', {
           PREFIX: prefix,
         })
@@ -24,7 +24,7 @@ export = {
         const { id } = guild
 
         if (!instance.isDBConnected()) {
-          message.channel.send(instance.messageHandler.get(guild, 'NO_DATABASE_FOUND'))
+          message.reply(instance.messageHandler.get(guild, 'NO_DATABASE_FOUND'))
           return
         }
 
@@ -43,13 +43,13 @@ export = {
 
         instance.setPrefix(guild, text)
 
-        message.channel.send(
+        message.reply(
           instance.messageHandler.get(guild, 'SET_PREFIX', {
             PREFIX: text,
           })
         )
       } else {
-        message.channel.send(
+        message.reply(
           instance.messageHandler.get(guild, 'CANNOT_SET_PREFIX_IN_DMS')
         )
       }

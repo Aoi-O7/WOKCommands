@@ -19,7 +19,7 @@ export = {
     const command = instance.commandHandler.getICommand(commandName);
 
     if (!command) {
-      message.channel.send(
+      message.reply(
         messageHandler.get(guild, "UNKNOWN_COMMAND", {
           COMMAND: commandName,
         })
@@ -37,16 +37,16 @@ export = {
       });
 
       if (results.n === 0) {
-        message.channel.send(messageHandler.get(guild, "NOT_CHANNEL_COMMAND"));
+        message.reply(messageHandler.get(guild, "NOT_CHANNEL_COMMAND"));
       } else {
-        message.channel.send(messageHandler.get(guild, "NO_LONGER_CHANNEL_COMMAND"));
+        message.reply(messageHandler.get(guild, "NO_LONGER_CHANNEL_COMMAND"));
       }
 
       return;
     }
 
     if (message.mentions.channels.size === 0) {
-      message.channel.send(messageHandler.get(guild, "NO_TAGGED_CHANNELS"));
+      message.reply(messageHandler.get(guild, "NO_TAGGED_CHANNELS"));
       return;
     }
 
@@ -67,7 +67,7 @@ export = {
       }
     );
 
-    message.channel.send(
+    message.reply(
       messageHandler.get(guild, "NOW_CHANNEL_COMMAND", {
         COMMAND: commandName,
         CHANNELS: args.join(" "),
